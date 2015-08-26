@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBA4C3CF1B8DBA36008841AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA4C3CE1B8DBA36008841AD /* AppDelegate.swift */; };
+		EBA4C3D11B8DBA36008841AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA4C3D01B8DBA36008841AD /* ViewController.swift */; };
+		EBA4C3D41B8DBA36008841AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA4C3D21B8DBA36008841AD /* Main.storyboard */; };
+		EBA4C3D61B8DBA36008841AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA4C3D51B8DBA36008841AD /* Images.xcassets */; };
+		EBA4C3D91B8DBA36008841AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA4C3D71B8DBA36008841AD /* LaunchScreen.xib */; };
+		EBA4C3E51B8DBA36008841AD /* BreathTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA4C3E41B8DBA36008841AD /* BreathTestTests.swift */; };
+		EBA4C3F01B8DBB2D008841AD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA4C3EE1B8DBB2D008841AD /* AVFoundation.framework */; };
+		EBA4C3F11B8DBB2D008841AD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA4C3EF1B8DBB2D008841AD /* AVKit.framework */; };
+		EBB257E51B8DC8B90007592A /* BreathRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB257E41B8DC8B90007592A /* BreathRecognizer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBA4C3DF1B8DBA36008841AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBA4C3C11B8DBA36008841AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBA4C3C81B8DBA36008841AD;
+			remoteInfo = BreathTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBA4C3C91B8DBA36008841AD /* BreathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA4C3CD1B8DBA36008841AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBA4C3CE1B8DBA36008841AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBA4C3D01B8DBA36008841AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBA4C3D31B8DBA36008841AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBA4C3D51B8DBA36008841AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBA4C3D81B8DBA36008841AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EBA4C3DE1B8DBA36008841AD /* BreathTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreathTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA4C3E31B8DBA36008841AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBA4C3E41B8DBA36008841AD /* BreathTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathTestTests.swift; sourceTree = "<group>"; };
+		EBA4C3EE1B8DBB2D008841AD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EBA4C3EF1B8DBB2D008841AD /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		EBB257E41B8DC8B90007592A /* BreathRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathRecognizer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBA4C3C61B8DBA36008841AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA4C3F01B8DBB2D008841AD /* AVFoundation.framework in Frameworks */,
+				EBA4C3F11B8DBB2D008841AD /* AVKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBA4C3DB1B8DBA36008841AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBA4C3C01B8DBA36008841AD = {
+			isa = PBXGroup;
+			children = (
+				EBA4C3CB1B8DBA36008841AD /* BreathTest */,
+				EBA4C3E11B8DBA36008841AD /* BreathTestTests */,
+				EBA4C3CA1B8DBA36008841AD /* Products */,
+				EBA4C3F21B8DBB33008841AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EBA4C3CA1B8DBA36008841AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBA4C3C91B8DBA36008841AD /* BreathTest.app */,
+				EBA4C3DE1B8DBA36008841AD /* BreathTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBA4C3CB1B8DBA36008841AD /* BreathTest */ = {
+			isa = PBXGroup;
+			children = (
+				EBA4C3CE1B8DBA36008841AD /* AppDelegate.swift */,
+				EBA4C3D01B8DBA36008841AD /* ViewController.swift */,
+				EBA4C3D21B8DBA36008841AD /* Main.storyboard */,
+				EBA4C3D51B8DBA36008841AD /* Images.xcassets */,
+				EBA4C3D71B8DBA36008841AD /* LaunchScreen.xib */,
+				EBA4C3CC1B8DBA36008841AD /* Supporting Files */,
+				EBB257E41B8DC8B90007592A /* BreathRecognizer.swift */,
+			);
+			path = BreathTest;
+			sourceTree = "<group>";
+		};
+		EBA4C3CC1B8DBA36008841AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBA4C3CD1B8DBA36008841AD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBA4C3E11B8DBA36008841AD /* BreathTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBA4C3E41B8DBA36008841AD /* BreathTestTests.swift */,
+				EBA4C3E21B8DBA36008841AD /* Supporting Files */,
+			);
+			path = BreathTestTests;
+			sourceTree = "<group>";
+		};
+		EBA4C3E21B8DBA36008841AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBA4C3E31B8DBA36008841AD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBA4C3F21B8DBB33008841AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBA4C3EE1B8DBB2D008841AD /* AVFoundation.framework */,
+				EBA4C3EF1B8DBB2D008841AD /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBA4C3C81B8DBA36008841AD /* BreathTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBA4C3E81B8DBA36008841AD /* Build configuration list for PBXNativeTarget "BreathTest" */;
+			buildPhases = (
+				EBA4C3C51B8DBA36008841AD /* Sources */,
+				EBA4C3C61B8DBA36008841AD /* Frameworks */,
+				EBA4C3C71B8DBA36008841AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BreathTest;
+			productName = BreathTest;
+			productReference = EBA4C3C91B8DBA36008841AD /* BreathTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBA4C3DD1B8DBA36008841AD /* BreathTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBA4C3EB1B8DBA36008841AD /* Build configuration list for PBXNativeTarget "BreathTestTests" */;
+			buildPhases = (
+				EBA4C3DA1B8DBA36008841AD /* Sources */,
+				EBA4C3DB1B8DBA36008841AD /* Frameworks */,
+				EBA4C3DC1B8DBA36008841AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBA4C3E01B8DBA36008841AD /* PBXTargetDependency */,
+			);
+			name = BreathTestTests;
+			productName = BreathTestTests;
+			productReference = EBA4C3DE1B8DBA36008841AD /* BreathTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBA4C3C11B8DBA36008841AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Jeames Bone";
+				TargetAttributes = {
+					EBA4C3C81B8DBA36008841AD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EBA4C3DD1B8DBA36008841AD = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EBA4C3C81B8DBA36008841AD;
+					};
+				};
+			};
+			buildConfigurationList = EBA4C3C41B8DBA36008841AD /* Build configuration list for PBXProject "BreathTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBA4C3C01B8DBA36008841AD;
+			productRefGroup = EBA4C3CA1B8DBA36008841AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBA4C3C81B8DBA36008841AD /* BreathTest */,
+				EBA4C3DD1B8DBA36008841AD /* BreathTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBA4C3C71B8DBA36008841AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA4C3D41B8DBA36008841AD /* Main.storyboard in Resources */,
+				EBA4C3D91B8DBA36008841AD /* LaunchScreen.xib in Resources */,
+				EBA4C3D61B8DBA36008841AD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBA4C3DC1B8DBA36008841AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBA4C3C51B8DBA36008841AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA4C3D11B8DBA36008841AD /* ViewController.swift in Sources */,
+				EBB257E51B8DC8B90007592A /* BreathRecognizer.swift in Sources */,
+				EBA4C3CF1B8DBA36008841AD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBA4C3DA1B8DBA36008841AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA4C3E51B8DBA36008841AD /* BreathTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBA4C3E01B8DBA36008841AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBA4C3C81B8DBA36008841AD /* BreathTest */;
+			targetProxy = EBA4C3DF1B8DBA36008841AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBA4C3D21B8DBA36008841AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBA4C3D31B8DBA36008841AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBA4C3D71B8DBA36008841AD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBA4C3D81B8DBA36008841AD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBA4C3E61B8DBA36008841AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBA4C3E71B8DBA36008841AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBA4C3E91B8DBA36008841AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BreathTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBA4C3EA1B8DBA36008841AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BreathTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EBA4C3EC1B8DBA36008841AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BreathTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreathTest.app/BreathTest";
+			};
+			name = Debug;
+		};
+		EBA4C3ED1B8DBA36008841AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BreathTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreathTest.app/BreathTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBA4C3C41B8DBA36008841AD /* Build configuration list for PBXProject "BreathTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA4C3E61B8DBA36008841AD /* Debug */,
+				EBA4C3E71B8DBA36008841AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBA4C3E81B8DBA36008841AD /* Build configuration list for PBXNativeTarget "BreathTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA4C3E91B8DBA36008841AD /* Debug */,
+				EBA4C3EA1B8DBA36008841AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBA4C3EB1B8DBA36008841AD /* Build configuration list for PBXNativeTarget "BreathTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA4C3EC1B8DBA36008841AD /* Debug */,
+				EBA4C3ED1B8DBA36008841AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBA4C3C11B8DBA36008841AD /* Project object */;
+}
