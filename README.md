@@ -7,13 +7,17 @@ It uses a combination of the average sound level and the peak level to (hopefull
 ## How to use
 Copy `BreathRecognizer.swift` into your Xcode project.
 
-## Code Example
+### Code Example
+When you create a BreathRecognizer you provide it a threshold and a function to be called when the breathing state changes.
+
 ```swift
   // Specifty a threshold in decibels (-15 seems to work well for breath detection)
   BreathRecognizer(threshold) { isBreathing in
     doSomethingWithTheNewBreathingValue(isBreathing)
   }
 ```
+
+Also see the example in `ViewController.swift`.
 
 Note:
 - The update function will only be called when the state changes (eg. breathing -> not breathing)
