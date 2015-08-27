@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>753DB152-D6F8-414F-BBF8-E55A59D1A147</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BreathRecognizer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>14D8EF48DF2EF29D915DD6B19EDFC210CB2A19D0</key>
+		<string>github.com:jeamesbone/breath-recognizer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BreathRecognizer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>14D8EF48DF2EF29D915DD6B19EDFC210CB2A19D0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jeamesbone/breath-recognizer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>14D8EF48DF2EF29D915DD6B19EDFC210CB2A19D0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>14D8EF48DF2EF29D915DD6B19EDFC210CB2A19D0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>breath-recognizer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BreathTest.xcodeproj">
+      location = "self:/Users/jeamesbone/dev/breath-recognizer/BreathRecognizer.xcodeproj">
    </FileRef>
 </Workspace>
