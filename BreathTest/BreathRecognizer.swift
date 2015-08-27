@@ -10,17 +10,22 @@ import Foundation
 import AVFoundation
 
 class BreathRecognizer: NSObject {
+    /// Threshold in decibels (-160 < threshold < 0)
     let threshold: Float
+    
     var recorder: AVAudioRecorder? = nil
+    
     var isBreathing = false {
         willSet(newBreathing) {
+            // Run the callback function only on change
             if isBreathing != newBreathing {
                 self.breathFunction(newBreathing)
             }
         }
     }
+
     var breathFunction: (Bool) -> ()
-    
+
     init(threshold: Float, breathFunction: (Bool) -> ()) {
         self.threshold = threshold
         self.breathFunction = breathFunction
@@ -53,10 +58,12 @@ class BreathRecognizer: NSObject {
     func tick() {
         if let recorder = recorder {
             recorder.updateMeters()
+            
+            // Uses a weighted average of the average power and peak power for the time period.
             let average = recorder.averagePowerForChannel(0) * 0.4
             let peak = recorder.peakPowerForChannel(0) * 0.6
-            
             let combinedPower = average + peak
+            
             println(combinedPower)
             
             if (combinedPower > threshold) {
