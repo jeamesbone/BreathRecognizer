@@ -53,8 +53,8 @@ class BreathRecognizer: NSObject {
     func tick() {
         if let recorder = recorder {
             recorder.updateMeters()
-            let average = recorder.averagePowerForChannel(0) * 0.5
-            let peak = recorder.averagePowerForChannel(0) * 0.5
+            let average = recorder.averagePowerForChannel(0) * 0.4
+            let peak = recorder.peakPowerForChannel(0) * 0.6
             
             let combinedPower = average + peak
             println(combinedPower)
