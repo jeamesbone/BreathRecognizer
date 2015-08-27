@@ -66,11 +66,7 @@ class BreathRecognizer: NSObject {
             
             println(combinedPower)
             
-            if (combinedPower > threshold) {
-                isBreathing = true
-            } else {
-                isBreathing = false
-            }
+            isBreathing = (combinedPower > threshold)
         }
     }
 }
