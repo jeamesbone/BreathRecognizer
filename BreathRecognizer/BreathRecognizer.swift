@@ -64,8 +64,6 @@ class BreathRecognizer: NSObject {
             let peak = recorder.peakPowerForChannel(0) * 0.6
             let combinedPower = average + peak
 
-            print(combinedPower)
-
             isBreathing = (combinedPower > threshold)
         }
     }
