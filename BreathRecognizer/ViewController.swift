@@ -13,12 +13,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
-        breathRecognizer = BreathRecognizer(threshold: -15) { [unowned self] isBreathing in
-            if isBreathing {
-                self.bottomConstraint.constant = 300
-            } else {
-                self.bottomConstraint.constant = 50
+        do {
+            try breathRecognizer = BreathRecognizer(threshold: -15) { [unowned self] isBreathing in
+                if isBreathing {
+                    self.bottomConstraint.constant = 300
+                } else {
+                    self.bottomConstraint.constant = 50
+                }
             }
+        } catch {
+            print("Error initializing breath recognizer")
         }
     }
 }

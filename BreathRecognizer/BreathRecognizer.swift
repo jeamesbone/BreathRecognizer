@@ -12,9 +12,9 @@ import AVFoundation
 class BreathRecognizer: NSObject {
     /// Threshold in decibels (-160 < threshold < 0)
     let threshold: Float
-    
+
     var recorder: AVAudioRecorder? = nil
-    
+
     var isBreathing = false {
         willSet(newBreathing) {
             // Run the callback function only on change
@@ -26,46 +26,46 @@ class BreathRecognizer: NSObject {
 
     var breathFunction: (Bool) -> ()
 
-    init(threshold: Float, breathFunction: (Bool) -> ()) {
+    init(threshold: Float, breathFunction: (Bool) -> ()) throws {
         self.threshold = threshold
         self.breathFunction = breathFunction
-        
+
         super.init()
-        
-        self.setupAudioRecorder()
+
+        try self.setupAudioRecorder()
     }
-    
-    func setupAudioRecorder() {
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord, error: nil)
-        AVAudioSession.sharedInstance().setActive(true, error: nil)
-        
-        let url = NSURL.fileURLWithPath(NSTemporaryDirectory().stringByAppendingPathComponent("tmpSound"))
-        
-        let settings: [NSString: AnyObject] =
-        [AVSampleRateKey: 44100,
-            AVFormatIDKey: kAudioFormatAppleLossless,
-            AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.Max.rawValue]
-        
-        recorder = AVAudioRecorder(URL: url, settings: settings, error: nil)
+
+    func setupAudioRecorder() throws {
+        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
+        try AVAudioSession.sharedInstance().setActive(true)
+
+        let url = NSURL.fileURLWithPath(NSTemporaryDirectory()).URLByAppendingPathComponent("tmpSound")
+
+        var settings = [String: AnyObject]()
+        settings[AVSampleRateKey] = 44100.0
+        settings[AVFormatIDKey] = Int(kAudioFormatAppleLossless)
+        settings[AVNumberOfChannelsKey] = 1
+        settings[AVEncoderAudioQualityKey] = AVAudioQuality.Max.rawValue
+
+        try recorder = AVAudioRecorder(URL: url, settings: settings)
         recorder?.prepareToRecord()
         recorder?.meteringEnabled = true
         recorder?.record()
-        
-        let timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "tick", userInfo: nil, repeats: true)
+
+        NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "tick", userInfo: nil, repeats: true)
     }
-    
+
     func tick() {
         if let recorder = recorder {
             recorder.updateMeters()
-            
+
             // Uses a weighted average of the average power and peak power for the time period.
             let average = recorder.averagePowerForChannel(0) * 0.4
             let peak = recorder.peakPowerForChannel(0) * 0.6
             let combinedPower = average + peak
-            
-            println(combinedPower)
-            
+
+            print(combinedPower)
+
             isBreathing = (combinedPower > threshold)
         }
     }
